@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "efd14711-83b4-4ce8-8e6c-cb624d29ced8",
+		"name": "DataValidation",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Valid Requests",
+			"item": [
+				{
+					"name": "http://localhost:3000/customer/add",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"William Smith\",\r\n    \"address\": \"364 Main Street\",\r\n    \"city\": \"Hadean\",\r\n    \"state\": \"MN\",\r\n    \"country\": \"USA\",\r\n    \"zipCode\":\"44558\",\r\n    \"createdDate\": \"07/04/2019\",\r\n    \"isActive\":true,\r\n    \"discount\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customer/:623e8b0ca0a6f628a4a81d78",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								":623e8b0ca0a6f628a4a81d78"
+							],
+							"variable": [
+								{
+									"key": "623e8b0ca0a6f628a4a81d78",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/customer",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/customer",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/customer/623e8b0ca0a6f628a4a81d78",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/customer/623e8b0ca0a6f628a4a81d78",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"623e8b0ca0a6f628a4a81d78"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/customer/add",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jasper Co\",\r\n    \"address\": \"364 Main Street\",\r\n    \"city\": \"Hadean\",\r\n    \"state\": \"AZ\",\r\n    \"country\": \"USA\",\r\n    \"zipCode\":\"85281\",\r\n    \"createdDate\": \"07/04/2019\",\r\n    \"isActive\":true,\r\n    \"discount\": 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customer/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Invalid Requests",
+			"item": [
+				{
+					"name": "http://localhost:3000/customer/add/",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"123\",\r\n    \"address\": \"364 Main Street\",\r\n    \"city\": \"Hadean\",\r\n    \"state\": \"AZ\",\r\n    \"country\": \"India\",\r\n    \"zipCode\":\"85281\",\r\n    \"createdDate\": \"07/04/2019\",\r\n    \"isActive\":true,\r\n    \"discount\": 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customer/623f71cbbfd0801f34adf79f/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"623f71cbbfd0801f34adf79f",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:3000/customer/add/",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Jasper Co.JR\",\r\n    \"address\": \"364 Main Street\",\r\n    \"city\": \"Hadean\",\r\n    \"state\": \"Arizona\",\r\n    \"country\": \"USA\",\r\n    \"zipCode\":\"85281\",\r\n    \"createdDate\": \"07/04/2019\",\r\n    \"isActive\":true,\r\n    \"discount\": 20\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/customer/add/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"add",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
